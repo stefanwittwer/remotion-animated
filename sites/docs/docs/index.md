@@ -2,46 +2,44 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-Let's discover **Docusaurus in less than 5 minutes**.
+# Introduction
 
-## Getting Started
+Remotion Animated is a helper library that makes it easy to add animations to elements in [Remotion](https://www.remotion.dev).
 
-Get started by **creating a new site**.
+## Installation
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+To get started, [create a Remotion project](https://www.remotion.dev/docs#installation) if you haven't already, and install Remotion Animated using the package manager of your choice.
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
+<Tabs defaultValue="npm" values={[ { label: 'npm', value: 'npm' }, { label: 'yarn', value: 'yarn' }]}>
+<TabItem value="npm">
 
 ```bash
-npm init docusaurus@latest my-website classic
+npm i remotion-animated
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+  </TabItem>
+  <TabItem value="yarn">
 
 ```bash
-cd my-website
-npm run start
+yarn add remotion-animated
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+  </TabItem>
+</Tabs>
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## Usage
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+To animate something, use the `<Animated>` component around the elements you'd like to animate.
+
+```tsx
+import { Animated, Move } from 'remotion-animated';
+
+const ExampleComposition = () => (
+  <Animated animations={[Move({ x: 200 })]}>
+    <HelloWorld />
+  </Animated>
+);
+```
