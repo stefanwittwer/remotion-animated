@@ -1,0 +1,9 @@
+{
+  "extends": "@remotion",
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off"
+  },
+  "env": {
+    "node": true
+  }
+}
