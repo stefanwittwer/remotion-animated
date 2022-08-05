@@ -6,6 +6,10 @@ node_modules
 # testing
 coverage
 
+# generated
+.docusaurus
+.cache-loader
+
 # build
 out/
 build

@@ -9,8 +9,6 @@
     "upgrade": "remotion upgrade",
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"
   },
-  "repository": {},
-  "license": "UNLICENSED",
   "dependencies": {
     "@remotion/cli": "^3.0.0",
     "@remotion/eslint-config": "^3.0.0",
