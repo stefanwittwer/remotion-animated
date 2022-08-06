@@ -1,5 +1,13 @@
 {
   "extends": "tsconfig/react-library.json",
-  "include": ["."],
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "noUnusedLocals": true
+  },
+  "include": ["./src"],
   "exclude": ["dist", "build", "node_modules"]
 }

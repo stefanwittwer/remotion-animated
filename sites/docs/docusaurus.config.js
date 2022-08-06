@@ -12,7 +12,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'StefanWittwer',
+  organizationName: 'stefanwittwer',
   projectName: 'remotion-animated',
   i18n: {
     defaultLocale: 'en',

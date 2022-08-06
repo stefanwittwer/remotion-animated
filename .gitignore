@@ -13,6 +13,8 @@ coverage
 # build
 out/
 build
+dist
+*.tsbuildinfo
 
 # misc
 .DS_Store

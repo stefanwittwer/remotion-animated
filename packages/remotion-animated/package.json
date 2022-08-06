@@ -1,13 +1,37 @@
 {
   "name": "remotion-animated",
   "version": "1.0.0",
-  "description": "A delightful way to animate objects in Remotion.",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "description": "🌟 A delightful way to animate objects in Remotion.",
   "license": "MIT",
+  "homepage": "https://remotion-animated.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanwittwer/remotion-animated"
+  },
+  "keywords": [
+    "remotion",
+    "react",
+    "video",
+    "animation",
+    "react video"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "prepublish": "rm -f ./README.md && cp ../../README.md ./README.md",
+    "build": "tsc -d",
+    "watch": "tsc -w",
     "lint": "eslint *.ts*"
   },
+  "files": [
+    "lib",
+    "dist",
+    "es"
+  ],
+  "source": "src/index.tsx",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
@@ -19,6 +43,8 @@
     "remotion": "^3.1.0"
   },
   "peerDependencies": {
-    "remotion": "^3.1.0"
+    "remotion": ">=3.1.0",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   }
 }
