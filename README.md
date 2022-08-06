@@ -23,7 +23,7 @@ The idea behind Remotion Animated is to simplify and speed up the creation of si
 
 ## Documentation and Examples
 
-See the [documentation and examples](https://remotion-animated.github.io/) for this package on the package website.
+See the [documentation and examples](https://www.remotion-animated.dev/) for this package on the package website.
 
 ## Installation
 
