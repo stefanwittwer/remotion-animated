@@ -30,16 +30,7 @@ yarn add remotion-animated
   </TabItem>
 </Tabs>
 
-## Usage
+## License
 
-To animate something, use the `<Animated>` component around the elements you'd like to animate.
-
-```tsx
-import { Animated, Move } from 'remotion-animated';
-
-const ExampleComposition = () => (
-  <Animated animations={[Move({ x: 200 })]}>
-    <HelloWorld />
-  </Animated>
-);
-```
+Remotion Animated is available under the MIT License.
+Keep in mind that you Remotion itself has different licensing considerations.
