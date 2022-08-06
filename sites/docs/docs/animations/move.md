@@ -14,7 +14,7 @@ The `Move` animation translates an element horizontally, vertically or both.
 The following example animates the text inside down by 80 pixels and left by 20 pixels.
 
 ```jsx
-import { Animation, Move } from 'remotion-animated';
+import { Animated, Move } from 'remotion-animated';
 
 const Example = () => (
   <Animated animations={[Move({ x: -20, y: 80 })]}>
@@ -51,7 +51,7 @@ The y position offset that is used at the start of the animation (in pixels). _D
 If the element has already been moved by another `Move` animation, the element will have the combined translations of each animation in the end.
 
 ```jsx
-import { Animation, Move } from 'remotion-animated';
+import { Animated, Move } from 'remotion-animated';
 
 const Example = () => (
   <Animated

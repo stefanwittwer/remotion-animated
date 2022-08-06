@@ -14,7 +14,7 @@ The `Scale` animation scales an element horizontally, vertically or both, using 
 The following example scales the text by the factor 1.5.
 
 ```jsx
-import { Animation, Scale } from 'remotion-animated';
+import { Animated, Scale } from 'remotion-animated';
 
 const Example = () => (
   <Animated animations={[Scale({ by: 1.5 })]}>
@@ -53,7 +53,7 @@ The x scale factor that is used at the start of the animation. _Defaults to the 
 
 ### initialY?: `number`
 
-The y scale factor that is used at the start of the animation. _Defaults to the value of `ìnitial`._
+The y scale factor that is used at the start of the animation. _Defaults to the value of `initial`._
 
 ## Animation options
 

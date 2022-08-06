@@ -14,7 +14,7 @@ The `Size` animation changes the width or height of an element.
 The following example changes the width to 300 pixels.
 
 ```jsx
-import { Animation, Size } from 'remotion-animated';
+import { Animated, Size } from 'remotion-animated';
 
 const Example = () => (
   <Animated animations={[Size({ width: 300 })]}>

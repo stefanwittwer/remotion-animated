@@ -14,7 +14,7 @@ The `Fade` animation animates the opacity of an element.
 The following example fades the element in after 20 frames and fades it out after 60 frames.
 
 ```jsx
-import { Animation, Fade } from 'remotion-animated';
+import { Animated, Fade } from 'remotion-animated';
 
 const Example = () => (
   <Animated

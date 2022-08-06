@@ -14,7 +14,7 @@ The `Rotate` animation rotates an element along the Z-axis.
 The following example rotates the text by 180 degrees.
 
 ```jsx
-import { Animation, Rotate } from 'remotion-animated';
+import { Animated, Rotate } from 'remotion-animated';
 
 const Example = () => (
   <Animated animations={[Rotate({ degrees: 180 })]}>
