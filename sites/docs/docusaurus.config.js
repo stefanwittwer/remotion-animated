@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Remotion Animated',
   tagline: 'A delightful way to animate objects in Remotion.',
-  url: 'https://remotion-animated.github.io',
+  url: 'https://www.remotion-animated.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
