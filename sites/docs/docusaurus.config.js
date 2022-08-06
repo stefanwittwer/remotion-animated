@@ -45,6 +45,11 @@ const config = {
             position: 'left',
           },
           {
+            href: 'https://github.com/stefanwittwer/remotion-animated/blob/main/LICENSE.md',
+            label: 'License',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/stefanwittwer/remotion-animated',
             label: 'GitHub',
             position: 'right',
@@ -53,8 +58,40 @@ const config = {
       },
       footer: {
         style: 'light',
-        links: [{ title: 'Docs', items: [{ label: 'Tutorial', to: '/docs' }] }],
-        copyright: `Copyright © ${new Date().getFullYear()} Stefan Wittwer. Docs built with Docusaurus.`,
+        links: [
+          {
+            title: 'Docs',
+            items: [
+              { label: 'Introduction', to: '/docs' },
+              { label: 'Concept', to: '/docs/concept' },
+              { label: 'Animated component', to: '/docs/animated-component' },
+            ],
+          },
+          {
+            title: 'Animations',
+            items: [
+              { label: 'Move', to: '/docs/animations/move' },
+              { label: 'Scale', to: '/docs/animations/scale' },
+              { label: 'Rotate', to: '/docs/animations/rotate' },
+              { label: 'Fade', to: '/docs/animations/fade' },
+              { label: 'Size', to: '/docs/animations/size' },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'GitHub',
+                to: 'https://www.github.com/stefanwittwer/remotion-animated',
+              },
+              {
+                label: 'License',
+                to: 'https://github.com/stefanwittwer/remotion-animated/blob/main/LICENSE.md',
+              },
+            ],
+          },
+        ],
+        copyright: `© ${new Date().getFullYear()} <a href="https://www.stefanwittwer.com" target="_blank">Stefan Wittwer</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

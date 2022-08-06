@@ -23,3 +23,22 @@ const ExampleComposition = () => (
   </Animated>
 );
 ```
+
+## Example video from homepage
+
+The example demo video from the homepage of this website is made using Remotion Animated. You can take a look at the source code.
+
+<aside>
+  <a
+    className="button button--secondary"
+    href="https://github.com/stefanwittwer/remotion-animated/blob/main/sites/example/src/animated-code-examples/AnimatedCodeExamples.tsx"
+    target="_blank"
+  >
+    See code of this video
+  </a>
+</aside>
+
+<video autoPlay muted loop style={{width: '100%', margin: '2rem 0'}}>
+
+  <source src="/video/code-example.mp4" type="video/mp4" />
+</video>

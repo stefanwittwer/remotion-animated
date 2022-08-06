@@ -32,5 +32,5 @@ yarn add remotion-animated
 
 ## License
 
-Remotion Animated is available under the MIT License.
-Keep in mind that you Remotion itself has different licensing considerations.
+Remotion Animated is available under the [MIT License](https://github.com/stefanwittwer/remotion-animated/blob/main/LICENSE.md).
+Keep in mind that Remotion itself has [different licensing considerations](https://www.remotion.dev/docs/license).
