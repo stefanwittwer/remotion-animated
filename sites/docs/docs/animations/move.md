@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import AnimationProps from './\_animation-props.mdx';
+import AnimationSpringProps from './\_animation-spring-props.mdx';
+
 # Move
 
 The `Move` animation translates an element horizontally, vertically or both.
@@ -20,7 +23,7 @@ const Example = () => (
 );
 ```
 
-## Options
+## Move options
 
 ### x?: `number`
 
@@ -37,3 +40,30 @@ The x position offset that is used at the start of the animation (in pixels). _D
 ### initialY?: `number`
 
 The y position offset that is used at the start of the animation (in pixels). _Defaults to 0._
+
+## Animation options
+
+<AnimationProps />
+<AnimationSpringProps />
+
+## Combining
+
+If the element has already been moved by another `Move` animation, the element will have the combined translations of each animation in the end.
+
+```jsx
+import { Animation, Move } from 'remotion-animated';
+
+const Example = () => (
+  <Animated
+    animations={[
+      Move({ x: 20, y: 80 }),
+      Move({ x: 20, y: -80, start: 20 }),
+      Move({ x: 40, start: 40 }),
+    ]}
+  >
+    <h1>Example text</h1>
+  </Animated>
+);
+```
+
+In this example, the text element will have moved to the right by 80 pixels and returned to its original y position by the end of all animations.

@@ -8001,7 +8001,7 @@ remark-squeeze-paragraphs@4.0.0:
   dependencies:
     mdast-squeeze-paragraphs "^4.0.0"
 
-remotion@3.1.11, remotion@^3.0.0:
+remotion@3.1.11, remotion@^3.0.0, remotion@^3.1.0:
   version "3.1.11"
   resolved "https://registry.yarnpkg.com/remotion/-/remotion-3.1.11.tgz#7f34e391ee76e3211852629a84dd82617dc97b26"
   integrity sha512-Oc6jk4Crpr0UmhRJk32YC7IcrBXYXOI/hBQoL5DfNLTuw5oyZWYlrmlbMsjZ3L0Edx8n1miu51g6GpU8lRn4fg==

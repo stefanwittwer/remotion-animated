@@ -10,8 +10,10 @@ export interface FadeOptions
   duration?: number;
 }
 
+const DEFAULT_DURATION_IN_FRAMES = 15;
+
 const Fade = (options: FadeOptions): Animation => {
-  const duration = options.duration ?? 15;
+  const duration = options.duration ?? DEFAULT_DURATION_IN_FRAMES;
   const start = options.start ?? 0;
   return {
     in: start,
