@@ -50,6 +50,11 @@ const config = {
             position: 'right',
           },
           {
+            href: 'https://www.npmjs.com/package/remotion-animated',
+            label: 'npm',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/stefanwittwer/remotion-animated',
             label: 'GitHub',
             position: 'right',
@@ -83,6 +88,10 @@ const config = {
               {
                 label: 'GitHub',
                 to: 'https://www.github.com/stefanwittwer/remotion-animated',
+              },
+              {
+                label: 'View package on npm',
+                to: 'https://www.npmjs.com/package/remotion-animated',
               },
               {
                 label: 'License',

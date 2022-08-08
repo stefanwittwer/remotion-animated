@@ -10,6 +10,9 @@
   <a href="https://github.com/stefanwittwer/remotion-animated/blob/main/LICENSE.md">
     <img src="https://img.shields.io/github/license/stefanwittwer/remotion-animated" alt="License" />
   </a>
+  <a href="https://www.npmjs.com/package/remotion-animated">
+    <img src="https://img.shields.io/npm/v/remotion-animated" alt="remotion-animated on npm" />
+  </a>
   <img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?logo=typescript&logoColor=white" alt="TypeScript" />
 </p>
 
