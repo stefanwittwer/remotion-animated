@@ -9,6 +9,10 @@ interface AnimationOptions extends Partial<SpringConfig> {
    * - If you want the animated property to have a different initial value, you may change it beforehand using your own styling.
    */
   start?: number;
+  /**
+   * Number of frames for which the spring animation is stretched.
+   */
+  duration?: number;
 }
 
 export default AnimationOptions;

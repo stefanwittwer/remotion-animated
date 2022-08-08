@@ -8,6 +8,7 @@ const AnimationSpring =
     return spring({
       fps,
       frame: frame - (start ?? 0),
+      durationInFrames: options.duration,
       config: {
         ...withDefaultConfig,
         ...overrideSpringConfig,
