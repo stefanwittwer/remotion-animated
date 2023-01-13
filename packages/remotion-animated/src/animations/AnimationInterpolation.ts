@@ -8,16 +8,6 @@ const interpolateAnimation = (
 ) =>
   to === undefined
     ? defaultValue
-    : interpolate(
-        spring,
-        [0, 1],
-        [initialValue, to],
-        ClampInterpolationOptions
-      );
-
-export const ClampInterpolationOptions = {
-  extrapolateLeft: 'clamp',
-  extrapolateRight: 'clamp',
-} as const;
+    : interpolate(spring, [0, 1], [initialValue, to]);
 
 export default interpolateAnimation;

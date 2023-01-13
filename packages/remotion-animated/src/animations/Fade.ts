@@ -1,6 +1,5 @@
 import { interpolate, SpringConfig } from 'remotion';
 import Animation from './Animation';
-import { ClampInterpolationOptions } from './AnimationInterpolation';
 import AnimationOptions from './AnimationOptions';
 
 export interface FadeOptions
@@ -40,8 +39,7 @@ const Fade = (options: FadeOptions): Animation => {
       const opacity = interpolate(
         frame,
         [start, start + duration],
-        [options.initial ?? 1, options.to],
-        ClampInterpolationOptions
+        [options.initial ?? 1, options.to]
       );
       return { opacity };
     },
