@@ -10,18 +10,18 @@
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"
   },
   "dependencies": {
-    "@remotion/cli": "^3.0.0",
-    "@remotion/eslint-config": "^3.0.0",
+    "@remotion/cli": "^4.0.17",
+    "@remotion/eslint-config": "^4.0.17",
     "eslint": "^8.14.0",
     "prettier": "^2.6.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "remotion": "^3.0.0",
-    "typescript": "4.6.3"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.17",
+    "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@types/react": "^18.0.6",
-    "@types/web": "^0.0.61",
+    "@types/react": "^18.2.18",
+    "@types/web": "^0.0.112",
     "autoprefixer": "10.4.4",
     "postcss": "8.4.12",
     "postcss-loader": "6.2.1",
