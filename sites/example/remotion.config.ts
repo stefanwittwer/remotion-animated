@@ -1,9 +1,9 @@
-import { Config } from 'remotion';
+import { Config } from '@remotion/cli/config';
 
-Config.Rendering.setImageFormat('jpeg');
-Config.Output.setOverwriteOutput(true);
+Config.setVideoImageFormat('jpeg');
+Config.setOverwriteOutput(true);
 
-Config.Bundling.overrideWebpackConfig((currentConfiguration) => {
+Config.overrideWebpackConfig((currentConfiguration) => {
   return {
     ...currentConfiguration,
     module: {
