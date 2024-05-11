@@ -1,6 +1,6 @@
 {
   "name": "remotion-animated",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "🌟 A delightful way to animate objects in Remotion.",
   "license": "MIT",
   "homepage": "https://www.remotion-animated.dev",
@@ -34,9 +34,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
+    "@types/bun": "^1.1.1",
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
-    "@types/bun": "^1.1.1",
     "eslint": "^8.46.0",
     "eslint-config-custom": "*",
     "react": "^18.2.0",
