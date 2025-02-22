@@ -19,11 +19,20 @@ import Scale from './animations/Scale';
 import type { SizeOptions } from './animations/Size';
 import Size from './animations/Size';
 
+import type { EasingBehaviour } from './easing/EasingBehaviour';
+import type { EasingOptions } from './easing/EasingOptions';
+import CustomEasing from './easing/behaviours/CustomEasing';
+import Ease from './easing/behaviours/Ease';
+
 export {
   Animated,
   AnimatedProps,
   Animation,
   AnimationOptions,
+  CustomEasing,
+  Ease,
+  EasingBehaviour,
+  EasingOptions,
   Fade,
   FadeOptions,
   Move,
@@ -34,4 +43,5 @@ export {
   ScaleOptions,
   Size,
   SizeOptions,
+  Ease as TimingFunctions,
 };

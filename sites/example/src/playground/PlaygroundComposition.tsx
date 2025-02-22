@@ -1,5 +1,13 @@
 import { AbsoluteFill } from 'remotion';
-import { Animated, Size, Rotate, Fade, Move, Scale } from 'remotion-animated';
+import {
+  Animated,
+  Ease,
+  Fade,
+  Move,
+  Rotate,
+  Scale,
+  Size,
+} from 'remotion-animated';
 
 const PlaygroundComposition = () => {
   return (
@@ -9,14 +17,15 @@ const PlaygroundComposition = () => {
         delay={40}
         in={40}
         animations={[
-          Size({ width: 540, height: 540 }),
-          Rotate({ degrees: 360, mass: 400 }),
-          Fade({ to: 0, start: 60 }),
           Size({
-            width: 0,
-            height: 0,
-            start: 60,
+            width: 540,
+            height: 540,
+            duration: 50,
+            ease: Ease.Bezier(0.33, 1, 0.68, 1),
           }),
+          Rotate({ degrees: 360, mass: 400 }),
+          Fade({ to: 0, start: 80, duration: 50 }),
+          Size({ width: 0, height: 0, start: 60 }),
         ]}
         className="bg-slate-200"
       />

@@ -10,8 +10,8 @@
     "test": "eslint src --ext ts,tsx,js,jsx && tsc"
   },
   "dependencies": {
-    "@remotion/cli": "^4.0.17",
-    "@remotion/eslint-config": "^4.0.17",
+    "@remotion/cli": "^4.0.267",
+    "@remotion/eslint-config": "^4.0.267",
     "eslint": "^8.14.0",
     "prettier": "^2.6.2",
     "react": "^18.2.0",

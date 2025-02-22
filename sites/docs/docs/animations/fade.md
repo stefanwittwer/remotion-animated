@@ -3,7 +3,6 @@ sidebar_position: 4
 ---
 
 import AnimationProps from './\_animation-props.mdx';
-import AnimationEasingProps from './\_animation-easing-props.mdx';
 
 # Fade
 
@@ -50,4 +49,3 @@ To achieve a **fade in animation**, set `initial` to 0.
 ## Animation options
 
 <AnimationProps />
-<AnimationEasingProps />
