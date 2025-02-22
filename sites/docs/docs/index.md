@@ -31,7 +31,7 @@ yarn add remotion-animated
   <TabItem value="pnpm">
 
 ```bash
-pnpm add remotion-animated
+pnpm i remotion-animated
 ```
 
   </TabItem>

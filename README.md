@@ -3,7 +3,7 @@
     <h1 align="center">Remotion Animated</h1>
 </p>
 <p align="center">
-    A delightful way to animate objects in <a href="https://www.remotion.dev">Remotion</a>.
+    A delightful, declarative way to animate objects in <a href="https://www.remotion.dev">Remotion</a>.
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 ## What is Remotion Animated?
 
-The idea behind Remotion Animated is to simplify and speed up the creation of simple animations in your Remotion projects, by:
+Remotion Animated lets you **declaratively specify animations** in Remotion. It simplifies and speeds up the creation of simple animations in your Remotion projects, by:
 
 - Moving the animation logic fully into the JSX, using the `<Animated />` component;
 - Providing defaults that make animations look great out-of-the-box;
@@ -42,6 +42,18 @@ npm i remotion-animated
 
 ```
 yarn add remotion-animated
+```
+
+**Install using pnpm**
+
+```
+pnpm i remotion-animated
+```
+
+**Install using bun**
+
+```
+bun add remotion-animated
 ```
 
 ## License
