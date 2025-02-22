@@ -7,11 +7,11 @@ import AnimationSpringProps from './\_animation-spring-props.mdx';
 
 # Rotate
 
-The `Rotate` animation rotates an element along the Z-axis.
+The `Rotate` animation rotates an element clockwise along the Z-axis. It can also rotate in 3D space clockwise along the x and y axes.
 
 ## Usage
 
-The following example rotates the text by 180 degrees.
+The following example rotates the text by 180 degrees in 2D space.
 
 ```jsx
 import { Animated, Rotate } from 'remotion-animated';
@@ -23,11 +23,39 @@ const Example = () => (
 );
 ```
 
+### 3D rotation
+
+The following example rotates the text by 180 degrees in 3D space along the x-axis.
+
+```jsx
+import { Animated, Rotate } from 'remotion-animated';
+
+const Example = () => (
+  <div style={{ perspective: '1200px' }}>
+    <Animated animations={[Rotate({ degreesX: 180 })]}>
+      <h1>Example text</h1>
+    </Animated>
+  </div>
+);
+```
+
 ## Rotation options
 
 ### degrees?: `number`
 
-The element will be rotated clockwise by this angle.
+The element will be rotated clockwise by this angle along the z-axis (normal rotation in 2D space).
+
+### degreesX?: `number`
+
+The element will be rotated in 3D space clockwise by this angle in the x-axis.
+
+This affects the element's rotation in 3D space, which will be visible if the element [has a perspective](https://css-tricks.com/how-css-perspective-works/).
+
+### degreesY?: `number`
+
+The element will be rotated in 3D space clockwise by this angle in the y-axis.
+
+This affects the element's rotation in 3D space, which will be visible if the element [has a perspective](https://css-tricks.com/how-css-perspective-works/).
 
 #### Examples:
 
