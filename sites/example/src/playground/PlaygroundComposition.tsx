@@ -11,10 +11,13 @@ import {
 
 const PlaygroundComposition = () => {
   return (
-    <AbsoluteFill className="bg-gray-100 items-center justify-center">
+    <AbsoluteFill
+      className="bg-gray-100 items-center justify-center"
+      style={{ perspective: '1200px' }}
+    >
       <Animated
         absolute
-        delay={40}
+        delay={20}
         in={40}
         animations={[
           Size({
@@ -23,7 +26,11 @@ const PlaygroundComposition = () => {
             duration: 50,
             ease: Ease.Bezier(0.33, 1, 0.68, 1),
           }),
-          Rotate({ degrees: 360, mass: 400 }),
+          Rotate({
+            degreesX: 180,
+            duration: 90,
+            ease: Ease.QuinticOut,
+          }),
           Fade({ to: 0, start: 80, duration: 50 }),
           Size({ width: 0, height: 0, start: 60 }),
         ]}

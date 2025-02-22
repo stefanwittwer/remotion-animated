@@ -8,10 +8,14 @@ export type MoveOptions = AnimationOptions & {
   x?: number;
   /** The element will be moved down by this amount (in pixels). */
   y?: number;
+  /** The element will be moved along the z-axis by this amount (in pixels). */
+  z?: number;
   /** The x position offset that is used at the start of the animation (in pixels). _Defaults to `0`._ */
   initialX?: number;
   /** The y position offset that is used at the start of the animation (in pixels). Defaults to `0`. */
   initialY?: number;
+  /** The z position offset that is used at the start of the animation (in pixels). Defaults to `0`. */
+  initialZ?: number;
 };
 
 /**
@@ -22,7 +26,6 @@ const Move = (options: MoveOptions): Animation => {
     in: options.start ?? 0,
     valuesAt: (frame, fps) => {
       const input = valueWithEasing(frame, fps, options);
-
       const translateX = interpolateAnimation(
         input,
         options.x,
@@ -33,8 +36,12 @@ const Move = (options: MoveOptions): Animation => {
         options.y,
         options.initialY
       );
-
-      return { translateX, translateY };
+      const translateZ = interpolateAnimation(
+        input,
+        options.z,
+        options.initialZ
+      );
+      return { translateX, translateY, translateZ };
     },
   };
 };

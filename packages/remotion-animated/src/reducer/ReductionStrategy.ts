@@ -12,10 +12,14 @@ const reductionStrategyForProperty = (
   switch (property) {
     case 'translateX':
     case 'translateY':
-    case 'rotate':
+    case 'translateZ':
+    case 'rotateX':
+    case 'rotateY':
+    case 'rotateZ':
       return ReductionStrategy.Addition;
     case 'scaleX':
     case 'scaleY':
+    case 'scaleZ':
       return ReductionStrategy.Multiplication;
     case 'opacity':
     case 'width':
