@@ -2,9 +2,10 @@
 sidebar_position: 2
 ---
 
-# Concept
+# How it works
 
-The idea behind Remotion Animated is to simplify and speed up the creation of simple animations in your Remotion projects, by:
+Remotion Animated lets you **declaratively specify animations in Remotion**.
+It simplifies and speeds up the creation of simple animations in your Remotion projects, by:
 
 - Moving the animation logic fully into the JSX, using the [`<Animated />` component](/docs/animated-component);
 - Providing defaults that make animations look great out-of-the-box;

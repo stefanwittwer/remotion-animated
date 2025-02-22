@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Remotion Animated',
-  tagline: 'A delightful way to animate objects in Remotion.',
+  tagline: 'A delightful, declarative way to animate things in Remotion.',
   url: 'https://www.remotion-animated.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
