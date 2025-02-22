@@ -40,7 +40,7 @@
     "eslint": "^8.46.0",
     "eslint-config-custom": "*",
     "react": "^18.2.0",
-    "remotion": "^4.0.17",
+    "remotion": "^4.0.267",
     "tsconfig": "*",
     "typescript": "^5.1.6"
   },

@@ -1,11 +1,12 @@
 import { spring, SpringConfig } from 'remotion';
-import AnimationOptions from '../animations/AnimationOptions';
+import AnimationOptions from '../../animations/AnimationOptions';
+import { EasingBehaviour } from '../EasingBehaviour';
 
-const AnimationSpring =
-  (withDefaultConfig?: Partial<SpringConfig>) =>
+const CustomSpring =
+  (withDefaultConfig?: Partial<SpringConfig>): EasingBehaviour =>
   (frame: number, fps: number, options: AnimationOptions = {}) => {
     const { start, ...overrideSpringConfig } = options;
-    return spring({
+    const driver = spring({
       fps,
       frame: frame - (start ?? 0),
       durationInFrames: options.duration,
@@ -14,6 +15,7 @@ const AnimationSpring =
         ...overrideSpringConfig,
       },
     });
+    return { driver };
   };
 
-export default AnimationSpring;
+export default CustomSpring;

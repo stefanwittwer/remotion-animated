@@ -1,6 +1,6 @@
-import { SpringConfig } from 'remotion';
+import { EasingOptions } from '../easing/EasingOptions';
 
-interface AnimationOptions extends Partial<SpringConfig> {
+type AnimationOptions = EasingOptions & {
   /**
    * Frame at which the animation should start. _Defaults to `0`._
    *
@@ -13,6 +13,6 @@ interface AnimationOptions extends Partial<SpringConfig> {
    * Number of frames for which the spring animation is stretched.
    */
   duration?: number;
-}
+};
 
 export default AnimationOptions;

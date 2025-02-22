@@ -44,11 +44,12 @@ const animatedStylesFromAnimations = (
 const Animated = (props: AnimatedProps) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const { animations } = props;
 
   const animationFrame = frame - (props.delay ?? 0);
   const animatedStyles = useMemo(
-    () => animatedStylesFromAnimations(props.animations, animationFrame, fps),
-    [animationFrame, fps, props.animations]
+    () => animatedStylesFromAnimations(animations, animationFrame, fps),
+    [animationFrame, fps, animations]
   );
 
   const isBeforeInPoint = props.in && frame < props.in;

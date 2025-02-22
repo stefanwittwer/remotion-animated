@@ -1,9 +1,9 @@
-import { interpolate, SpringConfig } from 'remotion';
+import { valueWithEasing } from '../easing/EasingBehaviour';
 import Animation from './Animation';
+import interpolateAnimation from './AnimationInterpolation';
 import AnimationOptions from './AnimationOptions';
 
-export interface FadeOptions
-  extends Omit<AnimationOptions, keyof Partial<SpringConfig>> {
+export type FadeOptions = AnimationOptions & {
   /**
    * The element's opacity will be animated to this value.
    *
@@ -23,24 +23,24 @@ export interface FadeOptions
    * Number of frames for which the fade animation runs. _Defaults to `15` frames._
    */
   duration?: number;
-}
-
-const DEFAULT_DURATION_IN_FRAMES = 15;
+};
 
 /**
  * The `Fade` animation animates the opacity of an element.
  */
 const Fade = (options: FadeOptions): Animation => {
-  const duration = options.duration ?? DEFAULT_DURATION_IN_FRAMES;
   const start = options.start ?? 0;
   return {
     in: start,
-    valuesAt: (frame: number) => {
-      const opacity = interpolate(
-        frame,
-        [start, start + duration],
-        [options.initial ?? 1, options.to],
-        {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}
+    valuesAt: (frame, fps) => {
+      const input = valueWithEasing(frame, fps, options);
+      const initial = options.initial ?? 1;
+      const opacity = interpolateAnimation(
+        input,
+        options.to,
+        initial,
+        initial,
+        true
       );
       return { opacity };
     },

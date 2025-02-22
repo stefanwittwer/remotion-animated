@@ -19,11 +19,20 @@ import Scale from './animations/Scale';
 import type { SizeOptions } from './animations/Size';
 import Size from './animations/Size';
 
+import type { EasingBehaviour } from './easing/EasingBehaviour';
+import type { EasingOptions } from './easing/EasingOptions';
+import Beziers from './easing/behaviours/Beziers';
+import CustomBezier from './easing/behaviours/CustomBezier';
+
 export {
   Animated,
   AnimatedProps,
   Animation,
   AnimationOptions,
+  Beziers,
+  CustomBezier,
+  EasingBehaviour,
+  EasingOptions,
   Fade,
   FadeOptions,
   Move,

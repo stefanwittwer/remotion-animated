@@ -1,13 +1,17 @@
 import { interpolate } from 'remotion';
 
 const interpolateAnimation = (
-  spring: number,
+  input: number,
   to: number | undefined,
   initialValue = 0,
-  defaultValue = initialValue
-) =>
-  to === undefined
-    ? defaultValue
-    : interpolate(spring, [0, 1], [initialValue, to]);
+  defaultValue = initialValue,
+  clamp = false
+) => {
+  if (to === undefined) return defaultValue;
+  return interpolate(input, [0, 1], [initialValue, to], {
+    extrapolateLeft: clamp ? 'clamp' : undefined,
+    extrapolateRight: clamp ? 'clamp' : undefined,
+  });
+};
 
 export default interpolateAnimation;
