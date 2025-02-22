@@ -1,6 +1,14 @@
 import AnimationOptions from '../animations/AnimationOptions';
 import DefaultSpring from './behaviours/DefaultSpring';
 
+/**
+ * An easing behaviour is a function that takes in the current frame, the FPS,
+ * and options and returns a driver value.
+ *
+ * You'll typically use easing behaviours from the `Ease` namespace from
+ * `remotion-animated`, such as `Ease.Linear`, `Ease.Cubic`, etc.,
+ * or you can create a custom easing behaviour using the `CustomEasing` function.
+ */
 export type EasingBehaviour = (
   frame: number,
   fps: number,
@@ -11,8 +19,8 @@ export const easingForOptions = (
   options: AnimationOptions,
   defaultingTo: EasingBehaviour = DefaultSpring
 ): EasingBehaviour => {
-  if ('easing' in options && typeof options.easing === 'function')
-    return options.easing;
+  if ('ease' in options && typeof options.ease === 'function')
+    return options.ease;
 
   return defaultingTo;
 };
@@ -28,7 +36,7 @@ export const valueWithEasing = (
   if (value.driver === undefined) {
     // The user may have provided a Remotion easing function from the Easing module.
     throw new TypeError(
-      'Easing function must return a driver value. You may have used an easing function from the Remotion easing module, rather than from the Beziers collection of Remotion Animated. If you intended to use a Remotion easing function, please wrap it in a CustomBezier function first.'
+      'Easing function must return a driver value. You may have imported an easing function from Remotion directly, rather than from the `Ease` collection of `remotion-animated`. If you intended to use a Remotion easing function directly, wrap it with the `CustomEasing` function first.'
     );
   }
   return value.driver;

@@ -1,7 +1,7 @@
 import { AbsoluteFill } from 'remotion';
 import {
   Animated,
-  Beziers,
+  Ease,
   Fade,
   Move,
   Rotate,
@@ -21,7 +21,7 @@ const PlaygroundComposition = () => {
             width: 540,
             height: 540,
             duration: 50,
-            easing: Beziers.Custom(0.33, 1, 0.68, 1),
+            ease: Ease.Bezier(0.33, 1, 0.68, 1),
           }),
           Rotate({ degrees: 360, mass: 400 }),
           Fade({ to: 0, start: 80, duration: 50 }),

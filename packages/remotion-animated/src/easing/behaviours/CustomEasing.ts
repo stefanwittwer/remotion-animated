@@ -4,8 +4,8 @@ import { EasingBehaviour } from '../EasingBehaviour';
 
 const DEFAULT_DURATION = 15;
 
-const CustomBezier =
-  (bezierFunction: (t: number) => number): EasingBehaviour =>
+const CustomEasing =
+  (easingFunction: (t: number) => number): EasingBehaviour =>
   (frame: number, _fps: number, options: AnimationOptions = {}) => {
     const { start } = options;
     const durationInFrames = options.duration ?? DEFAULT_DURATION;
@@ -16,10 +16,10 @@ const CustomBezier =
       {
         extrapolateLeft: 'clamp',
         extrapolateRight: 'clamp',
-        easing: bezierFunction,
+        easing: easingFunction,
       }
     );
     return { driver };
   };
 
-export default CustomBezier;
+export default CustomEasing;

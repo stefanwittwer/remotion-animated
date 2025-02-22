@@ -21,16 +21,16 @@ import Size from './animations/Size';
 
 import type { EasingBehaviour } from './easing/EasingBehaviour';
 import type { EasingOptions } from './easing/EasingOptions';
-import Beziers from './easing/behaviours/Beziers';
-import CustomBezier from './easing/behaviours/CustomBezier';
+import CustomEasing from './easing/behaviours/CustomEasing';
+import Ease from './easing/behaviours/Ease';
 
 export {
   Animated,
   AnimatedProps,
   Animation,
   AnimationOptions,
-  Beziers,
-  CustomBezier,
+  CustomEasing,
+  Ease,
   EasingBehaviour,
   EasingOptions,
   Fade,
@@ -43,4 +43,5 @@ export {
   ScaleOptions,
   Size,
   SizeOptions,
+  Ease as TimingFunctions,
 };
