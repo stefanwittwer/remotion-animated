@@ -33,6 +33,12 @@ The element will be moved to the right by this amount (in pixels).
 
 The element will be moved down by this amount (in pixels).
 
+### z?: `number`
+
+The element will be moved for- or backward along the z-axis by this amount (in pixels).
+
+This affects the element's position in 3D space, which will be visible if the element [has a perspective](https://css-tricks.com/how-css-perspective-works/).
+
 ### initialX?: `number`
 
 The x position offset that is used at the start of the animation (in pixels). _Defaults to 0._
@@ -40,6 +46,10 @@ The x position offset that is used at the start of the animation (in pixels). _D
 ### initialY?: `number`
 
 The y position offset that is used at the start of the animation (in pixels). _Defaults to 0._
+
+### initialZ?: `number`
+
+The z position offset that is used at the start of the animation (in pixels). _Defaults to 0._
 
 ## Animation options
 

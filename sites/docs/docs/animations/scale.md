@@ -7,7 +7,7 @@ import AnimationSpringProps from './\_animation-spring-props.mdx';
 
 # Scale
 
-The `Scale` animation scales an element horizontally, vertically or both, using a `transform`.
+The `Scale` animation scales an element horizontally, vertically or both, using a `transform`. It can also scale in 3D space along the z-axis.
 
 ## Usage
 
@@ -27,7 +27,7 @@ const Example = () => (
 
 ### by?: `number`
 
-The element will be proportionately scaled up or down by this factor.
+The element will be proportionately scaled up or down by this factor in the x and y axes.
 
 #### Examples:
 
@@ -43,6 +43,12 @@ The element will be scaled up or down horizontally by this factor.
 
 The element will be scaled up or down vertically by this factor.
 
+### z?: `number`
+
+The element will be scaled in 3D space up or down along the z-axis by this factor.
+
+This affects the element's scale in 3D space, which will be visible if the element [has a perspective](https://css-tricks.com/how-css-perspective-works/).
+
 ### initial?: `number`
 
 The proportional scale factor that is used at the start of the animation. _Defaults to 1._
@@ -54,6 +60,10 @@ The x scale factor that is used at the start of the animation. _Defaults to the 
 ### initialY?: `number`
 
 The y scale factor that is used at the start of the animation. _Defaults to the value of `initial`._
+
+### initialZ?: `number`
+
+The z scale factor that is used at the start of the animation.
 
 ## Animation options
 
