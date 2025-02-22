@@ -8,3 +8,12 @@ Frame at which the animation should start. _Defaults to 0._
 - If you want the animated property to have a different initial value, you may change it beforehand using your own styling.
 
 :::
+
+### duration?: `number`
+
+Number of frames for which the animation is stretched. Can be set for both spring and bezier easing animations. Defaults to 15 frames for custom easing functions.
+
+### easing?: `EasingBehaviour`
+
+You can provide a custom easing behaviour here instead of the spring properties.
+This will override the spring animation. Read more about easing in the [Easing section](/docs/category/easing).
